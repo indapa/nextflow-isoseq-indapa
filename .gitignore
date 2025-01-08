@@ -1,0 +1,6 @@
+resources/**
+example-data/**
+Samplesheets/** 
+nextflow-logs/** 
+Results/** 
+
