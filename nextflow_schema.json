@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com//master/nextflow_schema.json",
+  "title": " pipeline parameters",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "samplesheet_dir": {
+      "type": "string",
+      "default": "s3://seqera-results-aindap/Samplesheets",
+      "hidden": true
+    },
+    "samplesheet": {
+      "type": "string",
+      "default": "s3://seqera-results-aindap/Samplesheets/isoseq_samplesheet_s3.csv"
+    },
+    "output_dir": {
+      "type": "string",
+      "default": "s3://seqera-results-aindap/IsoSeq-results/"
+    },
+    "resources_dir": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources",
+      "hidden": true
+    },
+    "reference": {
+      "type": "string",
+      "default": "s3://pacbio-hifi-human-wgs-reference/dataset/GRCh38/human_GRCh38_no_alt_analysis_set.fasta"
+    },
+    "primer_file": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/IsoSeq_v2_primers_12.fasta"
+    },
+    "reference_index": {
+      "type": "string",
+      "default": "s3://pacbio-hifi-human-wgs-reference/dataset/GRCh38/human_GRCh38_no_alt_analysis_set.fasta.fai"
+    },
+    "mmi_index": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/human_GRCh38_no_alt_analysis_set.mmi"
+    },
+    "pigeon_annotations_gtf": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/gencode.v39.annotation.sorted.gtf"
+    },
+    "pigeon_annotations_gtf_idx": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/gencode.v39.annotation.sorted.gtf.pgi"
+    },
+    "tss_file": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/refTSS_v3.3_human_coordinate.hg38.sorted.bed"
+    },
+    "tss_file_idx": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/refTSS_v3.3_human_coordinate.hg38.sorted.bed.pgi"
+    },
+    "polyA_file": {
+      "type": "string",
+      "default": "s3://aindap-pb-resources/polyA.list.txt"
+    },
+    "cpu": {
+      "type": "integer",
+      "default": 8
+    },
+    "sort_threads": {
+      "type": "integer",
+      "default": 8
+    }
+  },
+  "required": [
+    "samplesheet",
+    "output_dir",
+    "reference",
+    "primer_file",
+    "mmi_index",
+    "reference_index"
+  ]
+}
