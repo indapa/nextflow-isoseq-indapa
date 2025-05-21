@@ -31,6 +31,6 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 
 # Install lima and isoseq using conda: https://github.com/PacificBiosciences/pbbioconda
-RUN conda install -c conda-forge -y libgcc-ng>=12 \
-    && conda install -c bioconda -y lima isoseq pbpigeon=1.3.0 pbmm2 \
+RUN conda install -c bioconda -c conda-forge -y lima isoseq pbpigeon=1.3.0 pbmm2 \
     && conda clean -afy
+
