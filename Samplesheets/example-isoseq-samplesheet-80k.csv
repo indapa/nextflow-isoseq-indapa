@@ -1,0 +1,2 @@
+sample_id,bam_file,pbi_file
+Example,human_80k_Sreads.segmented.bam,human_80k_Sreads.segmented.bam.pbi_file
