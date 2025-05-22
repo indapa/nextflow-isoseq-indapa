@@ -8,6 +8,6 @@ Entrypoint to the pipeline is `main.nf`. The example samplesheet references a te
 nextflow run main.nf --samplesheet example-isoseq-samplesheet-80k.csv
 ```
 
-Preferably, you can run the pipeline on Seqera Platform. See the [documentation] on how to set it up. 
+Preferably, you can run the pipeline on Seqera Platform. See the [documentation](https://docs.seqera.io/platform-cloud/getting-started/quickstart-demo/launch-pipelines) on how to set it up. 
 
 
