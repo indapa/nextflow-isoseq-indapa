@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'Dockerfile'
+      - 'modules/isoseq/Dockerfile'
       
 jobs:
   build:
