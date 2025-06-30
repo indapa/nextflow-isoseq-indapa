@@ -15,7 +15,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag indapa/indapa-isoseq:latest
+        run: docker build modules/isoseq --file modules/isoseq/Dockerfile --tag indapa/indapa-isoseq:latest
+
 
       - name: Push image to Docker Hub
         run: |
