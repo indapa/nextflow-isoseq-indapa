@@ -1,0 +1,23 @@
+name: Docker Hub CI
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'Dockerfile'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag indapa/indapa-isoseq:latest
+
+      - name: Push image to Docker Hub
+        run: |
+          docker login -u indapa -p ${{ secrets.DOCKERHUB_PAT }}
+          docker push indapa/indapa-isoseq:latest
